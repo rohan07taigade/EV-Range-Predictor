@@ -1,0 +1,133 @@
+/* 1. Global Reset & Fonts */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+  /* Futuristic Deep Blue Gradient */
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* 2. The Glass Panel (Main Card) */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.1); /* See-through white */
+  backdrop-filter: blur(10px); /* The "Frosted Glass" effect */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  text-align: center;
+}
+
+h1 {
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #a0c4ff;
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 3. Inputs Grid */
+.controls-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.input-group {
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-bottom: 8px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #4facfe;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* 4. The Button */
+.predict-btn {
+  grid-column: span 2;
+  padding: 15px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.predict-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(79, 172, 254, 0.6);
+}
+
+/* 5. The Result Box */
+.result-box {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(79, 172, 254, 0.15);
+  border-radius: 12px;
+  border: 1px solid #4facfe;
+  animation: slideUp 0.5s ease-out;
+}
+
+.result-box .label {
+  display: block;
+  font-size: 0.9rem;
+  color: #4facfe;
+  margin-bottom: 5px;
+}
+
+.result-box .value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.result-box small {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

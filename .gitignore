@@ -1,0 +1,9 @@
+# Python files to ignore
+__pycache__/
+*.pyc
+*.pkl
+.venv/
+
+# Ignore the huge Node folders (Safety Net)
+node_modules/
+ev-dashboard/node_modules/
